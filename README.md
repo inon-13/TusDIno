@@ -1,8 +1,8 @@
 **NOTE:** The script is not available for chrome://dino which is the original dino that you get when having no internet! **:NOTE**
 
-**If you want to request support for a website on my script, make an [Issue](https://github.com/inon13/TusDino/issues)**
+**If you want to request support for a website on my script, make an [Issue](https://github.com/inon-13/TusDino/issues)**
 
-**By [inon13](https://github.com/inon13/)**
+**By [inon13](https://github.com/inon-13/)**
 
 <h1><p align="center">TusDino 0.17.4</p></h1>
 <hr>
