@@ -1,14 +1,13 @@
 // ==UserScript==
-// @name         [NEW UPDATE] ＴｕｓＤｉｎｏ || BEST CHROME DINO GAME T-REX MOD MENU CHEAT - (0.17.4)
-// @namespace    https://github.com/nonumbershere/TusDino
-// @homepageURL  https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/
-// @supportURL   https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/issues
-// @homepage     https://discord.gg/6eaDrx5J9s
-// @version      0.17.4
+// @name         T u s  D i n o || Mode menu for the chrome dino game - (0.17.5)
+// @namespace    https://github.com/inon-13/TusDino
+// @homepageURL  https://github.com/inon-13/TusDino
+// @supportURL  https://github.com/inon-13/TusDino/issues
+// @version      0.17.5
 // @dark-mode    no        -  Enables or disables if you want to active the dark mode instantly when loading the page (on/off)
 // @show-discord no        -  Shows or hides the discord alert message on the start (yes/no)
-// @description  THE BEST CHROME DINO HACK: SET SPEED, KILL PLAYER, ESP EXPLOIT, NO-CLIP, TRACERS, TELEPORT, FLY +MORE EXPLOITS
-// @author       Lapide (nonumbershere)
+// @description  The best hack for chrome dino game with over 50 hacks such as ESP, Auto player Bot, and much more!
+// @author      inon13 (Original creator: Lapide/nonumbershere)
 // @license      MIT
 // @match        *://chromedino.com/*
 // @match        *://dino-chrome.com/*
@@ -22,7 +21,7 @@
 // @match        *://trex-runner.com/*
 // @match        *://fivesjs.skipser.com/trex-game/
 // @require      https://cdn.jsdelivr.net/npm/sweetalert2@11
-// @icon         https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/assets/Logo.png?raw=true
+// @icon         https://github.com/inon-13/TusDino/blob/main/assets/Logo.png?raw=true
 // @run-at       document-start
 // @grant        unsafeWindow
 // @grant        GM_info
@@ -32,21 +31,41 @@
 
 // NOTE: THE MOST SUPPORTED SITE IS: chromedino.com
 // THE SCRIPT MIGHT BE BUGGY ON OTHERS
+(async () => {
+    var whatsnewpage = "Loading...";
+    try {
+        // Fetch the markdown content from the github
+        const response = await fetch("https://raw.githubusercontent.com/inon-13/TusDino/refs/heads/main/whatsnew.md");
+        if (!response.ok) throw new Error("Failed to fetch markdown" + response);
+        const markdown = await response.text();
 
-/*
-Slight UI Change: Make texts bolder & Changed the toggle boxs font color to be easier to read
-Changed tab: Others to Miscs
-Added What News alert
-Added Set Double Dino Size
-Added Continue Death
-Added Auto Continue Death
-Added Set Jump Height
-Added Set Drop Velocity
-Added Version Checker & Multiple Script Detection
-Removed a few supported pages
-*/
-
-(function () {
+        // Convert the markdown
+        whatsnewpage = markdown
+            .split("\n")
+            .filter(line => !line.startsWith("## What's new") && line.trim()) // Remove the header and empty lines
+            .map(line => {
+                const trimmed = line.trim();
+                if (trimmed.startsWith("* ")) {
+                if (trimmed.startsWith("* +")) {
+                    // Added entries
+                    const content = trimmed.replace("* +", "").trim();
+                    return `/point/color^lightgreen^${content}/point-end`;
+                } else if (trimmed.startsWith("* -")) {
+                    // Removed entries
+                    const content = trimmed.replace("* -", "").trim();
+                    return `/point/color^#FF474C^${content}/point-end`;
+                } else {
+                    const content = trimmed.replace("* ", "").trim();
+                return `/point${content}/point-end`
+                }
+                }
+                return null; // Ignore lines that don't match
+            })
+            .filter(Boolean) // Remove null entries
+            .join("");
+    } catch (error) {
+        console.error("Error:", error);
+    }
     // Sorry if the code is a bit bad or unreadable, just trying to code as easy as possible
     var window = unsafeWindow;
     var isGithub = false;
@@ -95,12 +114,12 @@ Removed a few supported pages
 
         // Loading
         var supported = ['chromedino.com', 'dino-chrome.com', 'tuckercraig.com/dino', 'elgoog.im/t-rex', 'www.dinogame.net', 'elgoog.im/t-rex/v2', 'nointernetgame.com', 'chromedino.io', 'trex-runner.com', 'fivesjs.skipser.com/trex-game'];
-        function isSupported(gameUrl) {
-            return supported[gameUrl]
+        var scoreAntiCheat = "chromedino.com"
+        var hasAntiCheat = false
+        if (location.hostname == scoreAntiCheat) {
+            const antiCheatPrompt = alert(`https://${location.hostname}/ has an antiCheat, to protect you from being blocked by the website, we will block passing the score 200000`)
+            hasAntiCheat = true
         }
-        var whatsnewpage = `/pointSlight UI Change: Make texts bolder & Changed the toggle boxs font color to be easier to read/point-end/pointChanged tab: Others to Miscs/point-end/pointAdded What News alert/point-end/pointAdded Set Double Dino Size/point-end/pointAdded Continue Death/point-end/point Added Auto Continue Death/point-end/pointAdded Set Jump Height/point-end/pointAdded Set Drop Velocity/point-end/point Added Version Checker & Multiple Script Detection/point-end/point Removed a few supported pages/point-end`;
-        var imageContinue = new Image(60,45);
-        imageContinue.src='https://cdn.discordapp.com/attachments/1091299425277714502/1093634225351168020/continue.png';
 
         // Cheat
         var docoldEv = document.addEventListener;
@@ -125,7 +144,7 @@ Removed a few supported pages
                 };
                 applyScript("https://cdn.jsdelivr.net/npm/toastify-js");
                 applyScript(
-                    "https://raw.githubusercontent.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/main/assets/autorun.js"
+                    "https://raw.githubusercontent.com/inon-13/TusDino/main/assets/autorun.js"
                 );
                 var oldKeyDown = Runner.instance_.onKeyDown;
                 var oldstartJump = Runner.instance_.tRex.startJump;
@@ -676,13 +695,13 @@ Removed a few supported pages
                         , }
                     , };
 
-                fetch('https://raw.githubusercontent.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/main/version').then((text)=>{return text.text()}).then((txt)=>{
+                fetch('https://raw.githubusercontent.com/inon-13/TusDino/main/version').then((text)=>{return text.text()}).then((txt)=>{
                     if (txt.replaceAll('\n','') != tusdino.info.version) {
-                        var i = confirm("[NEW UPDATE] There's a new TusDino version ("+txt.replaceAll('\n', '')+"), would you like to update now?\n\nYou can check what's new here: https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/whatsnew.md");
+                        var i = confirm("[NEW UPDATE] There's a new TusDino version ("+txt.replaceAll('\n', '')+"), would you like to update now?\n\nYou can check what's new here: https://github.com/inon-13/TusDino/blob/main/whatsnew.md");
                         if (i) {
                             alert("Please delete your current script");
                             if (isGreasyfork) open("https://greasyfork.org/en/scripts/457594-%EF%BD%94%EF%BD%95%EF%BD%93%EF%BD%84%EF%BD%89%EF%BD%8E%EF%BD%8F-best-chrome-dino-game-t-rex-mod-menu-cheat-0-17-0");
-                            if (isGithub) open("https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/raw/main/tusdino.user.js");
+                            if (isGithub) open("https://github.com/inon-13/TusDino/raw/main/tusdino.user.js");
                         } else {
                             alert("Okay, we'll ask you next time you!");
                         }
@@ -2473,6 +2492,9 @@ Removed a few supported pages
                 // Style and UI
                 var StylePanel = document.createElement("style");
                 StylePanel.innerHTML = `
+                #logo {
+
+                }
         #tradingmenu hr {
     border: solid 0.1px white;
     border-radius: 66px;
@@ -2691,8 +2713,8 @@ text-align: left;
 " id="tradingmenuheader">${atob("VHVzRGlubw==")} - <i style="
     font-size: 16px;
 ">${tusdino.info.version} [By ${atob(
-                    "TGFwaWRl"
-                )}]</i><img src="https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/assets/Logo.png?raw=true" style="height: 24px;position: fixed;display: inline;margin-top: -2px;margin-left: 2px;right: 274px;margin-right: 3px;"><a target="blank" href="https://discord.gg/6eaDrx5J9s" style="
+                    "aW5vbjEz"
+                )}]</i><img src="https://github.com/inon-13/TusDino/blob/main/assets/Logo.png?raw=true" style="height: 24px;position: fixed;display: inline;margin-top: -2px;margin-left: 2px;right: 274px;margin-right: 3px;"><a target="blank" href="https://discord.gg/6eaDrx5J9s" style="
     font-size: 17px;
     color: lightblue;
     float: right;
@@ -2886,7 +2908,7 @@ text-align: left;
     line-height: 3.4;
     font-size: 14px;
     margin-left: 6px;
-"><a href="https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/issues/new">Report an issue</a> • <a href="https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/discussions/new?category=suggestions">Suggest option</a> • <a href="https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/fork">Fork the Github</a>
+"><a href="https://github.com/inon-13/TusDino/issues/new">Report an issue</a> • <a href="https://github.com/inon-13/TusDino/discussions/new?category=suggestions">Suggest option</a> • <a href="https://github.com/inon-13/TusDino/fork">Fork the Github</a>
           </div><div style="
     align-self: center;
     font-size: 14px;
@@ -3159,7 +3181,7 @@ text-align: left;
                 });
                 tusdino.onclick("setscore", function () {
                     var inp = parseFloat(
-                        document.getElementById("setscorecheatinput").value
+                        document.getElementById("setscorecheatinput").value >= 199999 & hasAntiCheat == true ? document.getElementById("setscorecheatinput").value : 199999
                     );
                     if (!isNaN(inp)) {
                         Runner.instance_.distanceRan =
@@ -3169,7 +3191,7 @@ text-align: left;
                 });
                 tusdino.onclick("sethighscore", function () {
                     var inp = parseFloat(
-                        document.getElementById("sethighscorecheatinput").value
+                        document.getElementById("setscorecheatinput").value >= 199999 & hasAntiCheat == true ? document.getElementById("setscorecheatinput").value : 199999
                     );
                     if (!isNaN(inp)) {
                         Runner.instance_.highestScore =
@@ -3253,25 +3275,25 @@ text-align: left;
                 };
 
                 var skins = {
-                    default: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/default.png?raw=true"
-                    , batman: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/batman%20colored.png?raw=true"
-                    , dinocol2: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/dino%20colored%202.png?raw=true"
-                    , dinocol: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/dino%20colored.png?raw=true"
-                    , godzilla: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/godzilla.png?raw=true"
-                    , joker: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/joker.png?raw=true"
-                    , mario2: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/mario%202.png?raw=true"
-                    , mariocol2: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/mario%20colored%202.png?raw=true"
-                    , mariocol: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/mario%20colored.png?raw=true"
-                    , mario: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/mario.png?raw=true"
-                    , minecraft: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/minecraft.png?raw=true"
-                    , naruto: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/naruto%20colored.png?raw=true"
-                    , noface: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/noface%20halloween.png?raw=true"
-                    , nyancat: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/nyan%20cat.png?raw=true"
-                    , pikachu: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/pikachu.png?raw=true"
-                    , santa: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/santa%20colored.png?raw=true"
-                    , soniccol2: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/sonic%20colored%202.png?raw=true"
-                    , soniccol: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/sonic%20colored.png?raw=true"
-                    , sonic: "https://github.com/Case-Clicker-2-Utilities/TusDino-Chrome-Dino-Mod-Menu/blob/main/skins/sonic.png?raw=true"
+                    default: "https://github.com/inon-13/TusDino/blob/main/skins/default.png?raw=true"
+                    , batman: "https://github.com/inon-13/TusDino/blob/main/skins/batman%20colored.png?raw=true"
+                    , dinocol2: "https://github.com/inon-13/TusDino/blob/main/skins/dino%20colored%202.png?raw=true"
+                    , dinocol: "https://github.com/inon-13/TusDino/blob/main/skins/dino%20colored.png?raw=true"
+                    , godzilla: "https://github.com/inon-13/TusDino/blob/main/skins/godzilla.png?raw=true"
+                    , joker: "https://github.com/inon-13/TusDino/blob/main/skins/joker.png?raw=true"
+                    , mario2: "https://github.com/inon-13/TusDino/blob/main/skins/mario%202.png?raw=true"
+                    , mariocol2: "https://github.com/inon-13/TusDino/blob/main/skins/mario%20colored%202.png?raw=true"
+                    , mariocol: "https://github.com/inon-13/TusDino/blob/main/skins/mario%20colored.png?raw=true"
+                    , mario: "https://github.com/inon-13/TusDino/blob/main/skins/mario.png?raw=true"
+                    , minecraft: "https://github.com/inon-13/TusDino/blob/main/skins/minecraft.png?raw=true"
+                    , naruto: "https://github.com/inon-13/TusDino/blob/main/skins/naruto%20colored.png?raw=true"
+                    , noface: "https://github.com/inon-13/TusDino/blob/main/skins/noface%20halloween.png?raw=true"
+                    , nyancat: "https://github.com/inon-13/TusDino/blob/main/skins/nyan%20cat.png?raw=true"
+                    , pikachu: "https://github.com/inon-13/TusDino/blob/main/skins/pikachu.png?raw=true"
+                    , santa: "https://github.com/inon-13/TusDino/blob/main/skins/santa%20colored.png?raw=true"
+                    , soniccol2: "https://github.com/inon-13/TusDino/blob/main/skins/sonic%20colored%202.png?raw=true"
+                    , soniccol: "https://github.com/inon-13/TusDino/blob/main/skins/sonic%20colored.png?raw=true"
+                    , sonic: "https://github.com/inon-13/TusDino/blob/main/skins/sonic.png?raw=true"
                     , };
 
                 function setSki(i) {
@@ -3804,6 +3826,16 @@ text-align: left;
                         tusdino.msg("Disabled Instant Respawn");
                     }
                 });
+                tusdino.onclick("Anti200000AntiCheat", function () {
+                    tusdino.cheats.Anti200000AntiCheat = !tusdino.cheats.Anti200000AntiCheat;
+                    if (tusdino.cheats.Anti200000AntiCheat) {
+                        document.getElementById("Anti200000AntiCheat").innerText = "Anti 200000 Anti Cheat - ON ";
+                        tusdino.msg("Enabled Anti 200000 Anti Cheat");
+                    } else {
+                        document.getElementById("Anti200000AntiCheat").innerText = "Anti 200000 Anti Cheat - OFF";
+                        tusdino.msg("Disabled Anti 200000 Anti Cheat");
+                    }
+                });
                 tusdino.onclick("obstacleBypass", function () {
                     tusdino.cheats.obstacleBypass = !tusdino.cheats.obstacleBypass;
                     if (tusdino.cheats.obstacleBypass) {
@@ -3961,7 +3993,7 @@ text-align: left;
                 tusdino.onclick("tradingcredits", function () {
                    tusdino.alert(
                     " /color^#855dff^ TusDino/color-end /color^#CF9FFF^Credits/color-end"
-                    , "/color^dodgerblue^Lapide/color-end : /color^lightblue^Main Developer & Coder /color-end - /color^royalblue^ Developed modules & menu /color-end \n\n /color^dodgerblue^ links /color-end : url-www.youtube.com/channel/UCRA3KXViuDmsmfuP0RF45_w?sub_confirmation=1> Youtube <url url-github.com/nonumbershere> Github <url url-discord.gg/6eaDrx5J9s> Discord <url \n\n /color^dodgerblue^"
+                    , "/color^dodgerblue^inon-13/color-end : /color^lightblue^Main Developer & Coder /color-end - /color^royalblue^ Developed modules & menu /color-end \n\n /color^dodgerblue^ links /color-end : url-www.youtube.com/channel/UCRA3KXViuDmsmfuP0RF45_w?sub_confirmation=1> Youtube <url url-github.com/nonumbershere> Github <url url-discord.gg/6eaDrx5J9s> Discord <url \n\n /color^dodgerblue^"
                    );
                 });
                 tusdino.onclick("tradingwhatsnew", function () {
