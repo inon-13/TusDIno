@@ -25,18 +25,7 @@ TusDino was created by inon13, and designed make the game more fun. It's just fu
 
 You can [**report an issue**](https://github.com/inon13/TusDino/issues/new) or [**upload your own version**](https://github.com/inon13/TusDino/pulls). If you have any question please ask in the [Discord](https://discord.gg/6eaDrx5J9s)!
 
-## What's new in 0.17.4
-- Slight UI Change: Make texts bolder & Changed the toggle boxs font color to be easier to read
-- Changed tab: Others to Miscs
-- Added What News alert
-- Added Set Double Dino Size
-- Added Continue Death
-- Added menu opacity changer
-- Added Auto Continue Death
-- Added Set Jump Height
-- Added Set Drop Velocity
-- Added Version Checker & Multiple Script Detection
-- Removed a few supported pages
+## To see what's new, head to the What's new md
 
 ## Installation Insructions
 - Get [TamperMonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), or any UserScript manager, but TamperMonkey is recommended. If you're not on chrome, then you can search for other userscript managers for your browser.
