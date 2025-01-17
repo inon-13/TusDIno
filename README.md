@@ -2,15 +2,15 @@
 
 **If you want to request support for a website on my script, make an [Issue](https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/issues)**
 
-**By [Lapide](https://github.com/nonumbershere/)**
+**By [inon13](https://github.com/inon13/)**
 
 <h1><p align="center">TusDino 0.17.4</p></h1>
 <hr>
 
-TusDino is the most advanced userscript chrome dino cheat with over 70+ cheats and that works on almost any dino game website. It was only created as a small and simple fun project by [Lapide](https://github.com/nonumbershere). I'll probably work on it whenever I feel like it. **You need a userscript manager in order to install the script. I recommend Tampermonkey!** 
+TusDino is the most advanced userscript chrome dino cheat with over 70+ cheats and that works on almost any dino game website. It was only created as a small and simple fun project by [inon13](https://github.com/inon13). I'll probably work on it whenever I feel like it. **You need a userscript manager in order to install the script. I recommend Tampermonkey!** 
 ***It would be great if you left a star! It would help with motivation, more updates and development.***
 
-- [Lapide](https://github.com/nonumbershere)
+- [inon13](https://github.com/inon13)
 
 **[Get the Auto Updator beta script](https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/raw/main/autoupdate_tusdino.user.js)** - It automatically update the menu for you every time there's an update
 
@@ -21,7 +21,7 @@ TusDino is the most advanced userscript chrome dino cheat with over 70+ cheats a
 If you're not on chrome, then you can check out [other userscript managers for your browser](https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu#userscript-managers)
 
 ## About
-TusDino was created by Lapide, and designed make the game more fun. It's just fun project that I work on when I have free time or out of school. I created this since I was bored and was looking for something to do for a few days!
+TusDino was created by inon13, and designed make the game more fun. It's just fun project that I work on when I have free time or out of school. I created this since I was bored and was looking for something to do for a few days!
 
 You can [**report an issue**](https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/issues/new) or [**upload your own version**](https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu/pulls). If you have any question please ask in the [Discord](https://discord.gg/6eaDrx5J9s)!
 
@@ -51,7 +51,7 @@ You can [**report an issue**](https://github.com/Fault-Utilities/TusDino-Chrome-
 
 ## Socials
 - [Discord](https://discord.gg/6eaDrx5J9s)
-- [Twitter](https://twitter.com/LapideDev)
+- [Twitter](https://twitter.com/inon13Dev)
 - [YouTube](https://www.youtube.com/watch?v=ZdfO_ocV8PI)
 - [Fault Utilities Website](https://fault-utilities.glitch.me/)
 
@@ -163,7 +163,7 @@ You can [**report an issue**](https://github.com/Fault-Utilities/TusDino-Chrome-
 ![image](https://user-images.githubusercontent.com/64395933/230475875-6f2c1b1e-b512-4d39-a70d-976953eff5a5.png)
 ![image](https://user-images.githubusercontent.com/64395933/230475939-29cbc95e-5596-4acd-8d1e-945c5ec6f71d.png)
 ## Developers / Creators (1)
-- [nonumbershere / Lapide](https://github.com/nonumbershere/)
+- [inon13 / inon13](https://github.com/inon13/)
 
 # Userscript Managers
 **These are a list of the best userscript managers for your supported browsers.**
