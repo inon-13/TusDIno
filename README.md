@@ -1,4 +1,4 @@
-!! SCRIPT NOT AVALIABLE FOR chrome://dino !!
+**NOTE:** The script is not available for chrome://dino which is the original dino that you get when having no internet! **:NOTE**
 
 **If you want to request support for a website on my script, make an [Issue](https://github.com/inon13/TusDino/issues)**
 
