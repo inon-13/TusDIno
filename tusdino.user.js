@@ -2805,6 +2805,7 @@ text-align: left;
  <button id="arc" class="tradingcheckbox" title="Puts a red circle ring around the player">Arc - OFF</button>
           <button id="toggledarkmode" title="Enable or disable in-game dark mode">Dark Game Mode - ${darkMode ? "ON" : "OFF"}</button>
  <button id="noobstacle" class="tradingcheckbox" title="Removes all nearby obstacles">No Obstacle - OFF</button>
+  <button id="Anti200000AntiCheat" class="tradingcheckbox" title="">Anti 200000 Anti Cheat - OFF</button>
      <button id="lazervison" title="It remove the nearest obstacle, with a lazer">Lazer Vision</button>
      <button id="lazervisonkey" class="tradingcheckbox" title="If you press L, it will active lazer vison">Lazer Vision Key (L) - OFF</button>
  <button id="obliterate" class="tradingcheckbox" title="When the player collides with the obstacle, the obstacle gets destroyed instead of the player">Obliterate Obstacles - OFF</button>
@@ -3831,6 +3832,29 @@ text-align: left;
                     if (tusdino.cheats.Anti200000AntiCheat) {
                         document.getElementById("Anti200000AntiCheat").innerText = "Anti 200000 Anti Cheat - ON ";
                         tusdino.msg("Enabled Anti 200000 Anti Cheat");
+                        while (tusdino.cheats.Anti200000AntiCheat) {
+                        if (Runner.instance_.distanceRan >= 200000) {
+                        var n = Runner.instance_.gameOver;
+                    Runner.instance_.gameOver = tusdino.saved.gameOver;
+                    if (Runner.instance_.gameOver.toString() !== "function() {}") {
+                        if (tusdino.cheats.instantrespawn) {
+                            Runner.instance_.gameOver();
+                            Runner.instance_.restart();
+                        } else {
+                            Runner.instance_.gameOver();
+                        }
+                        tusdino.msg("Killed player to block 200000 Anti Cheat");
+                    } else {
+                        swal.fire({
+                            icon: "error"
+                            , title: "Can't kill player"
+                            , text: "Unable to kill player, can be due to a cheat preventing this being enabled."
+                            , });
+                        tusdino.logs.error("Unable to kill dino (killplayer)");
+                    }
+                    Runner.instance_.gameOver = n;
+                        }
+                        }
                     } else {
                         document.getElementById("Anti200000AntiCheat").innerText = "Anti 200000 Anti Cheat - OFF";
                         tusdino.msg("Disabled Anti 200000 Anti Cheat");
