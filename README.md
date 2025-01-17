@@ -4,33 +4,34 @@
 
 **By [inon13](https://github.com/inon-13/)**
 
-<h1><p align="center">TusDino 0.17.4</p></h1>
+<h1><p align="center">TusDino 0.17.5</p></h1>
 <hr>
 
-TusDino is the most advanced userscript chrome dino cheat with over 70+ cheats and that works on almost any dino game website. It was only created as a small and simple fun project by [inon13](https://github.com/inon13). I'll probably work on it whenever I feel like it. **You need a userscript manager in order to install the script. I recommend Tampermonkey!** 
-***It would be great if you left a star! It would help with motivation, more updates and development.***
+TusDino is the most advanced user-script chrome dino cheat with over 70+ cheats and that works on almost any dino game website. It was only created as a small and simple fun project by [inon13](https://github.com/inon-13). I'll probably work on it whenever I feel like it. **You need a user-script manager to install the script. I recommend Tampermonkey!** 
+***It would be great if you left a star! It would help with motivation, more updates, and development.***
 
-- [inon13](https://github.com/inon13)
+- [inon13](https://github.com/inon-13)
+- [Lapide / Nonumbershere (Original Creator)](https://github.com/nonumbershere/)
 
-**[Get the Auto Updator beta script](https://github.com/inon13/TusDino/raw/main/autoupdate_tusdino.user.js)** - It automatically update the menu for you every time there's an update
+**[Get the Auto Updator beta script](https://github.com/inon-13/TusDino/raw/main/autoupdate_tusdino.user.js)** - It automatically updates the menu for you every time there's an update
 
-[![Install from Github](https://img.shields.io/badge/Install%20Script-Github-blue?style=for-the-badge)](https://github.com/inon13/TusDino/raw/main/tusdino.user.js) [![Install Autoupdator from Github](https://img.shields.io/badge/Install%20Auotupdater%20Script-Github-blue?style=for-the-badge)](https://github.com/inon13/TusDino/raw/main/autoupdate_tusdino.user.js) [![Greasyfork](https://img.shields.io/greasyfork/dt/457594?color=blue&label=greasyfork%20install&style=for-the-badge)](https://greasyfork.org/en/scripts/457594/)
+[![Install from Github](https://img.shields.io/badge/Install%20Script-Github-blue?style=for-the-badge)](https://github.com/inon-13/TusDino/raw/main/tusdino.user.js) [![Install Autoupdator from Github](https://img.shields.io/badge/Install%20Auotupdater%20Script-Github-blue?style=for-the-badge)](https://github.com/inon-13/TusDino/raw/main/autoupdate_tusdino.user.js) [![Greasyfork](https://img.shields.io/greasyfork/dt/457594?color=blue&label=greasyfork%20install&style=for-the-badge)](https://greasyfork.org/en/scripts/457594/)
 
 **You need to install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or any userscript manager or the script wont work**
 
-If you're not on chrome, then you can check out [other userscript managers for your browser](https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu#userscript-managers)
+If you're not on Chrome, then you can check out [other user-script managers for your browser](https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu#userscript-managers)
 
 ## About
-TusDino was created by inon13, and designed make the game more fun. It's just fun project that I work on when I have free time or out of school. I created this since I was bored and was looking for something to do for a few days!
+TusDino was created by inon13 and designed to make the game more fun. It's just a fun project that I work on when I have free time or am out of school. I created this because I was bored and was looking for something to do for a few days!
 
-You can [**report an issue**](https://github.com/inon13/TusDino/issues/new) or [**upload your own version**](https://github.com/inon13/TusDino/pulls). If you have any question please ask in the [Discord](https://discord.gg/6eaDrx5J9s)!
+You can [**report an issue**](https://github.com/inon-13/TusDino/issues/new) or [**upload your own version**](https://github.com/inon13/TusDino/pulls). If you have any questions please ask in the [Discord](https://discord.gg/6eaDrx5J9s)!
 
-## To see what's new, head to the What's new md
+## To see what's new, head to the `whatsnew.md` file
 
 ## Installation Insructions
-- Get [TamperMonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), or any UserScript manager, but TamperMonkey is recommended. If you're not on chrome, then you can search for other userscript managers for your browser.
-- Download the script from [Github](https://github.com/inon13/TusDino/raw/main/tusdino.user.js) or [Greasyfork](https://greasyfork.org/en/scripts/457594). Get the [Auto Updater Script from Github](https://github.com/inon13/TusDino/raw/main/autoupdate_tusdino.user.js) if you want the automatically updated versions.
-- If you see the script on TamperMonkey, it means you did it correctly. Congrats!
+- Get [TamperMonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), or any UserScript manager, but TamperMonkey is recommended. If you're not on Chrome, then you can search for other user-script managers for your browser.
+Download the script from [Github] (https://github.com/inon-13/TusDino/raw/main/tusdino.user.js) or [Greasyfork] (https://greasyfork.org/en/scripts/457594). If you want the automatically updated versions, Get the [Auto Updater Script from Github](https://github.com/inon-13/TusDino/raw/main/autoupdate_tusdino.user.js).
+- If you see the script on TamperMonkey, you did it correctly. Congrats!
 - Go to the [game](https://chromedino.com/)
 - *If you don't see the script then try to redo the Installation process*
 
@@ -39,10 +40,8 @@ You can [**report an issue**](https://github.com/inon13/TusDino/issues/new) or [
 - This cheat doesn't bypass any cheat detection, so beware
 
 ## Socials
-- [Discord](https://discord.gg/6eaDrx5J9s)
-- [Twitter](https://twitter.com/inon13Dev)
-- [YouTube](https://www.youtube.com/watch?v=ZdfO_ocV8PI)
-- [Fault Utilities Website](https://fault-utilities.glitch.me/)
+- Discord: \_inon13\_
+- [YouTube](https://www.youtube.com/@inon13)
 
 ## Supported Sites
 - **https://chromedino.com/** - ***Preferred and most supported site***
@@ -58,7 +57,7 @@ You can [**report an issue**](https://github.com/inon13/TusDino/issues/new) or [
 - https://fivesjs.skipser.com/trex-game/
 
 ## Features 0.17.4 (70+ Cheats)
--- **Press 'j' to hide / show the menu.** --
+-- **Press 'j' to hide/show the menu.** --
 - Player Tab
   - Instant Respawn
   - Set Double Dino Size
@@ -66,9 +65,9 @@ You can [**report an issue**](https://github.com/inon13/TusDino/issues/new) or [
   - Bhop
   - Teleport X axis
   - Restart
-  - Teleport Y Axis
+  - Teleport Y-Axis
   - Kill Player
-  - Autoplayer
+  - Autoplay
   - Set Gravity
   - Set Skin (Buggy)
 - Game Tab
@@ -82,9 +81,9 @@ You can [**report an issue**](https://github.com/inon13/TusDino/issues/new) or [
   - Duck and Jump
   - Playing Intro
   - Set Score
-  - Lazer Vision Key (L)
+  - Laser Vision Key (L)
   - No Obstacle
-  - Lazer Vision
+  - Laser Vision
   - Mute Game
   - Force Pause Game
   - Pause
@@ -155,13 +154,21 @@ You can [**report an issue**](https://github.com/inon13/TusDino/issues/new) or [
 - [inon13 / inon13](https://github.com/inon13/)
 
 # Userscript Managers
-**These are a list of the best userscript managers for your supported browsers.**
+**These are a list of the best user-script managers for your supported browsers.**
+**Most browsers support all extensions even from other browsers but you can download from their store just in case.**
 - Chrome
-  - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+  - [TamperMonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
   - [ViolentMonkey](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag?hl=en)
+  - [OrangeMonkey](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)
+  - [TamperMonkey Beta](https://chromewebstore.google.com/detail/tampermonkey-beta/gcalenpjmijncebpfijmoaglllgpjagf)
 - Firefox
-  - [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
-  - [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
-  - [Firemonkey](https://addons.mozilla.org/en-US/firefox/addon/firemonkey/)
+  - [TamperMonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
+  - [ViolentMonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
+  - [GreaseMonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
+  - [FireMonkey](https://addons.mozilla.org/en-US/firefox/addon/firemonkey/)
 - Opera / Opera GX
-  - [Tampermonkey Beta](https://addons.opera.com/en/extensions/details/tampermonkey-beta/)
+  - [TamperMonkey Beta](https://addons.opera.com/en/extensions/details/tampermonkey-beta/)
+- Microsoft Edge
+  - [TamperMonkey](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
+  - [ViolentMonkey](https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao)
+  - [TamperMonkey Beta](https://microsoftedge.microsoft.com/addons/detail/tampermonkey-beta/fcmfnpggmnlmfebfghbfnillijihnkoh)
