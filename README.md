@@ -22,7 +22,7 @@ TusDino is the most advanced user-script chrome dino cheat with over 70+ cheats 
 If you're not on Chrome, then you can check out [other user-script managers for your browser](https://github.com/Fault-Utilities/TusDino-Chrome-Dino-Mod-Menu#userscript-managers)
 
 ## About
-TusDino was created by inon13 and designed to make the game more fun. It's just a fun project that I work on when I have free time or am out of school. I created this because I was bored and was looking for something to do for a few days!
+TusDino was created by inon13 and designed to make the game more fun. It's just a fun project I work on when I have free time or am out of school. I created this because I was bored and was looking for something to do for a few days!
 
 You can [**report an issue**](https://github.com/inon-13/TusDino/issues/new) or [**upload your own version**](https://github.com/inon13/TusDino/pulls). If you have any questions please ask in the [Discord](https://discord.gg/6eaDrx5J9s)!
 
@@ -37,7 +37,7 @@ Download the script from [Github] (https://github.com/inon-13/TusDino/raw/main/t
 
 ## Help / Mod Info
 - Press 'j' to hide or show the menu
-- This cheat doesn't bypass any cheat detection. if you want to bypass chromedino.com's protection, you must install the [Chromedino.com Anti CHeat](https://github.com/inon-13/TusDino/raw/main/chromedino.com-anti-cheat-protection.js) to bypass the AntiCheat.
+- This cheat doesn't bypass any cheat detection. if you want to bypass chromedino.com's protection, you must install the [Chromedino.com Anti Cheat](https://github.com/inon-13/TusDino/raw/main/chromedino.com-anti-cheat-protection.js) to bypass the AntiCheat.
 
 ## Socials
 - Discord: \_inon13\_
