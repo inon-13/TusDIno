@@ -37,7 +37,7 @@ Download the script from [Github] (https://github.com/inon-13/TusDino/raw/main/t
 
 ## Help / Mod Info
 - Press 'j' to hide or show the menu
-- This cheat doesn't bypass any cheat detection, so beware
+- This cheat doesn't bypass any cheat detection. if you want to bypass chromedino.com's protection, you must install the [Chromedino.com Anti CHeat](https://github.com/inon-13/TusDino/raw/main/chromedino.com-anti-cheat-protection.js) to bypass the AntiCheat.
 
 ## Socials
 - Discord: \_inon13\_
