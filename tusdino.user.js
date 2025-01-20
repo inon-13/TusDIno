@@ -31,7 +31,7 @@
 
 // NOTE: THE MOST SUPPORTED SITE IS: chromedino.com
 // THE SCRIPT MIGHT BE BUGGY ON OTHERS
-(async () => {
+(async function() {
     var whatsnewpage = "Loading...";
     try {
         // Fetch the markdown content from the github
@@ -114,12 +114,6 @@
 
         // Loading
         var supported = ['chromedino.com', 'dino-chrome.com', 'tuckercraig.com/dino', 'elgoog.im/t-rex', 'www.dinogame.net', 'elgoog.im/t-rex/v2', 'nointernetgame.com', 'chromedino.io', 'trex-runner.com', 'fivesjs.skipser.com/trex-game'];
-        var scoreAntiCheat = "chromedino.com"
-        var hasAntiCheat = false
-        if (location.hostname == scoreAntiCheat) {
-            const antiCheatPrompt = alert(`https://${location.hostname}/ has an antiCheat, to protect you from being blocked by the website, we will block passing the score 200000`)
-            hasAntiCheat = true
-        }
 
         // Cheat
         var docoldEv = document.addEventListener;
@@ -175,21 +169,23 @@
                         if (document.getElementById("score-5") !== null) {
                             score_d = document.getElementById("score-5").innerHTML
                         }
-                        if (currentScore > score_d) {
+                        if (currentScore > score_d && location.hostname == "chromedino.com") {
                             var xhr = new XMLHttpRequest();
-                            xhr.open('GET', '/inc/check.php?score=' + currentScore, false);
+                            var AntiCheatScore = currentScore > 199999 ? 199999 : currentScore;
+                            xhr.open('GET', '/inc/check.php?score=' + AntiCheatScore, false);
                             xhr.send();
                             if (xhr.status != 200) {} else {
                                 if (xhr.responseText != '') {
                                     if (user_name == '') {
-                                        user_name = prompt(xhr.responseText, 'Anonym');
+                                        user_name = prompt(xhr.responseText, 'TusDino');
                                         if (user_name == 'null' || user_name == '') {
-                                            user_name = 'Anonym'
+                                            user_name = 'TusDino'
                                         }
                                     } else {
                                         alert(xhr.responseText)
                                     }
-                                    xhr.open('GET', '/inc/set.php?name=' + user_name + '&score=' + currentScore, false);
+                                     var AntiCheatScore = currentScore > 199999 ? 199999 : currentScore;
+                                    xhr.open('GET', '/inc/set.php?name=' + user_name + '&score=' + AntiCheatScore, false);
                                     xhr.send();
                                     //location.reload()
                                 }
@@ -233,8 +229,8 @@
                         , watermark: true
                         , lazervisual: false
                         , lazer: false
-                        , lazerv: false
-                        , }
+                        , lazerv: false,
+                    }
                     , whatsnew: function(isOld) {
                 tusdino.alert(" /color^#CF9FFF^What's new/color-end in the /color^#855dff^ TusDino/color-end /color^lightblue^ Update /color-end /color^dodgerblue^ "+tusdino.info.version+" /color-end", whatsnewpage)
             },
@@ -380,30 +376,32 @@
                                     score_d = document.getElementById("score-5").innerHTML;
                                 }
                                 try {
-                                    if (currentScore > score_d) {
+                                    if (currentScore > score_d && location.hostname == "chromedino.com") {
                                         var xhr = new XMLHttpRequest();
+                                         var AntiCheatScore = currentScore > 199999 ? 199999 : currentScore;
                                         xhr.open(
                                             "GET"
-                                            , "/inc/check.php?score=" + currentScore
+                                            , "/inc/check.php?score=" + AntiCheatScore
                                             , false
                                         );
                                         xhr.send();
                                         if (xhr.status != 200) {} else {
                                             if (xhr.responseText != "") {
                                                 if (user_name == "") {
-                                                    user_name = prompt(xhr.responseText, "Anonym");
+                                                    user_name = prompt(xhr.responseText, "TusDIno");
                                                     if (user_name == "null" || user_name == "") {
-                                                        user_name = "Anonym";
+                                                        user_name = "TusDino";
                                                     }
                                                 } else {
                                                     alert(xhr.responseText);
                                                 }
+                                                 var AntiCheatScore = currentScore > 199999 ? 199999 : currentScore;
                                                 xhr.open(
                                                     "GET"
                                                     , "/inc/set.php?name=" +
                                                     user_name +
                                                     "&score=" +
-                                                    currentScore
+                                                    AntiCheatScore
                                                     , false
                                                 );
                                                 xhr.send();
@@ -485,28 +483,30 @@
                                     try {
                                         if (currentScore > score_d) {
                                             var xhr = new XMLHttpRequest();
+                                             var AntiCheatScore = currentScore > 199999 ? 199999 : currentScore;
                                             xhr.open(
                                                 "GET"
-                                                , "/inc/check.php?score=" + currentScore
+                                                , "/inc/check.php?score=" + AntiCheatScore
                                                 , false
                                             );
                                             xhr.send();
                                             if (xhr.status != 200) {} else {
                                                 if (xhr.responseText != "") {
                                                     if (user_name == "") {
-                                                        user_name = prompt(xhr.responseText, "Anonym");
+                                                        user_name = prompt(xhr.responseText, "TusDino");
                                                         if (user_name == "null" || user_name == "") {
-                                                            user_name = "Anonym";
+                                                            user_name = "TusDino";
                                                         }
                                                     } else {
                                                         alert(xhr.responseText);
                                                     }
+                                                     var AntiCheatScore = currentScore > 199999 ? 199999 : currentScore;
                                                     xhr.open(
                                                         "GET"
                                                         , "/inc/set.php?name=" +
                                                         user_name +
                                                         "&score=" +
-                                                        currentScore
+                                                        AntiCheatScore
                                                         , false
                                                     );
                                                     xhr.send();
@@ -2805,7 +2805,6 @@ text-align: left;
  <button id="arc" class="tradingcheckbox" title="Puts a red circle ring around the player">Arc - OFF</button>
           <button id="toggledarkmode" title="Enable or disable in-game dark mode">Dark Game Mode - ${darkMode ? "ON" : "OFF"}</button>
  <button id="noobstacle" class="tradingcheckbox" title="Removes all nearby obstacles">No Obstacle - OFF</button>
-  <button id="Anti200000AntiCheat" class="tradingcheckbox" title="">Anti 200000 Anti Cheat - OFF</button>
      <button id="lazervison" title="It remove the nearest obstacle, with a lazer">Lazer Vision</button>
      <button id="lazervisonkey" class="tradingcheckbox" title="If you press L, it will active lazer vison">Lazer Vision Key (L) - OFF</button>
  <button id="obliterate" class="tradingcheckbox" title="When the player collides with the obstacle, the obstacle gets destroyed instead of the player">Obliterate Obstacles - OFF</button>
@@ -3103,9 +3102,8 @@ text-align: left;
                     }
                 });
 
-                // Listeners / Clicks
-                tusdino.onclick("killplayer", function () {
-                    var n = Runner.instance_.gameOver;
+                function killPlayer(prefix, suffix) {
+                var n = Runner.instance_.gameOver;
                     Runner.instance_.gameOver = tusdino.saved.gameOver;
                     if (Runner.instance_.gameOver.toString() !== "function() {}") {
                         if (tusdino.cheats.instantrespawn) {
@@ -3114,16 +3112,21 @@ text-align: left;
                         } else {
                             Runner.instance_.gameOver();
                         }
-                        tusdino.msg("Killed player");
+                        tusdino.msg(prefix + "Killed player" + suffix);
                     } else {
                         swal.fire({
                             icon: "error"
-                            , title: "Can't kill player"
+                            , title: prefix + "Can't kill player"
                             , text: "Unable to kill player, can be due to a cheat preventing this being enabled."
                             , });
-                        tusdino.logs.error("Unable to kill dino (killplayer)");
+                        tusdino.logs.error(prefix + "Unable to kill dino (killplayer)");
                     }
                     Runner.instance_.gameOver = n;
+                }
+
+                // Listeners / Clicks
+                tusdino.onclick("killplayer", function () {
+                    killPlayer("Kill Player: ", "");
                 });
                 tusdino.onclick("setspeed", function () {
                     var inp = parseFloat(
@@ -3182,7 +3185,7 @@ text-align: left;
                 });
                 tusdino.onclick("setscore", function () {
                     var inp = parseFloat(
-                        document.getElementById("setscorecheatinput").value >= 199999 & hasAntiCheat == true ? document.getElementById("setscorecheatinput").value : 199999
+                        document.getElementById("setscorecheatinput").value
                     );
                     if (!isNaN(inp)) {
                         Runner.instance_.distanceRan =
@@ -3192,7 +3195,7 @@ text-align: left;
                 });
                 tusdino.onclick("sethighscore", function () {
                     var inp = parseFloat(
-                        document.getElementById("setscorecheatinput").value >= 199999 & hasAntiCheat == true ? document.getElementById("setscorecheatinput").value : 199999
+                        document.getElementById("sethighscorecheatinput").value
                     );
                     if (!isNaN(inp)) {
                         Runner.instance_.highestScore =
@@ -3825,39 +3828,6 @@ text-align: left;
                     } else {
                         document.getElementById("instantrespawn").innerText = "Instant Respawn - OFF";
                         tusdino.msg("Disabled Instant Respawn");
-                    }
-                });
-                tusdino.onclick("Anti200000AntiCheat", function () {
-                    tusdino.cheats.Anti200000AntiCheat = !tusdino.cheats.Anti200000AntiCheat;
-                    if (tusdino.cheats.Anti200000AntiCheat) {
-                        document.getElementById("Anti200000AntiCheat").innerText = "Anti 200000 Anti Cheat - ON ";
-                        tusdino.msg("Enabled Anti 200000 Anti Cheat");
-                        while (tusdino.cheats.Anti200000AntiCheat) {
-                        if (Runner.instance_.distanceRan >= 200000) {
-                        var n = Runner.instance_.gameOver;
-                    Runner.instance_.gameOver = tusdino.saved.gameOver;
-                    if (Runner.instance_.gameOver.toString() !== "function() {}") {
-                        if (tusdino.cheats.instantrespawn) {
-                            Runner.instance_.gameOver();
-                            Runner.instance_.restart();
-                        } else {
-                            Runner.instance_.gameOver();
-                        }
-                        tusdino.msg("Killed player to block 200000 Anti Cheat");
-                    } else {
-                        swal.fire({
-                            icon: "error"
-                            , title: "Can't kill player"
-                            , text: "Unable to kill player, can be due to a cheat preventing this being enabled."
-                            , });
-                        tusdino.logs.error("Unable to kill dino (killplayer)");
-                    }
-                    Runner.instance_.gameOver = n;
-                        }
-                        }
-                    } else {
-                        document.getElementById("Anti200000AntiCheat").innerText = "Anti 200000 Anti Cheat - OFF";
-                        tusdino.msg("Disabled Anti 200000 Anti Cheat");
                     }
                 });
                 tusdino.onclick("obstacleBypass", function () {
